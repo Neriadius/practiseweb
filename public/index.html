@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>Express Static</title>
+        
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light px-5">
+                <a class="navbar-brand" href="index.html">LOGO</a>
+                <div class="container-fluid">                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link btn btn-outline-dark ms-2" href="about.html">about</a></li>
+                            <li class="nav-item"><a class="nav-link btn btn-outline-dark ms-2" href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+    <h1>Hello from Express!</h1>
+    
+    <form action="/submit" method="post">
+        <label for="name">First name:</label><br>
+        <input type="text" id="name" name="name" placeholder="name"><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="email@email.com"><br><br>
+        
+        <input type="text" id="message" name="message" placeholder="Background"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/hello" method="post">
+        <input type="submit" value="hello">
+    </form>
+    <form action="/user/:id" method="post">
+        <input type="submit" value="user id">
+    </form>
+    <form action="/status" method="post">
+        <input type="submit" value="status">
+    </form>
+    <form action="/sum" method="post">
+        <input type="submit" value="sum">
+    </form>
+    <form action="/sm" method="post">
+        <input type="submit" value="404">
+    </form>
+
+    <form action="/fast" method="get">
+        <input type="submit" value="fast">
+    </form>
+    <form action="/slow-async" method="get">
+        <input type="submit" value="slow slow-async">
+    </form>
+    <form action="/slow-blocking" method="get">
+        <input type="submit" value="slow-blocking">
+    </form>
+    <form action="/file-async" method="get">
+        <input type="submit" value="file-async">
+    </form>
+    <form action="/file-sync" method="get">
+        <input type="submit" value="file-sync">
+    </form>
+    <form action="/status" method="get">
+        <input type="submit" value="file-status">
+    </form>
+    
+</body>
+
+</html>
