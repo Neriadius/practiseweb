@@ -1,78 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <title>Express Static</title>
-        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend API Documentation</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light px-5">
-                <a class="navbar-brand" href="index.html">LOGO</a>
-                <div class="container-fluid">                    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link btn btn-outline-dark ms-2" href="about.html">about</a></li>
-                            <li class="nav-item"><a class="nav-link btn btn-outline-dark ms-2" href="contact.html">contact</a></li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </nav>
-    <h1>Hello from Express!</h1>
+    <h1>Backend API Documentation</h1>
+    <h2>Practice Task 12 Endpoints</h2>
+    <ul>
+        <li><strong>GET /version</strong> - API version information</li>
+        <li><strong>GET /health</strong> - Health check</li>
+        <li><strong>GET /</strong> - Root endpoint</li>
+    </ul>
     
-    <form action="/submit" method="post">
-        <label for="name">First name:</label><br>
-        <input type="text" id="name" name="name" placeholder="name"><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="email@email.com"><br><br>
-        
-        <input type="text" id="message" name="message" placeholder="Background"><br>
-        
-        <input type="submit" value="Submit">
-    </form>
-
-    <form action="/hello" method="post">
-        <input type="submit" value="hello">
-    </form>
-    <form action="/user/:id" method="post">
-        <input type="submit" value="user id">
-    </form>
-    <form action="/status" method="post">
-        <input type="submit" value="status">
-    </form>
-    <form action="/sum" method="post">
-        <input type="submit" value="sum">
-    </form>
-    <form action="/sm" method="post">
-        <input type="submit" value="404">
-    </form>
-
-    <form action="/fast" method="get">
-        <input type="submit" value="fast">
-    </form>
-    <form action="/slow-async" method="get">
-        <input type="submit" value="slow slow-async">
-    </form>
-    <form action="/slow-blocking" method="get">
-        <input type="submit" value="slow-blocking">
-    </form>
-    <form action="/file-async" method="get">
-        <input type="submit" value="file-async">
-    </form>
-    <form action="/file-sync" method="get">
-        <input type="submit" value="file-sync">
-    </form>
-    <form action="/status" method="get">
-        <input type="submit" value="file-status">
-    </form>
+    <h2>Practice Task 13 REST API</h2>
+    <ul>
+        <li><strong>GET /api/items</strong> - Get all items</li>
+        <li><strong>GET /api/items/:id</strong> - Get item by ID</li>
+        <li><strong>POST /api/items</strong> - Create new item</li>
+        <li><strong>PUT /api/items/:id</strong> - Full update</li>
+        <li><strong>PATCH /api/items/:id</strong> - Partial update</li>
+        <li><strong>DELETE /api/items/:id</strong> - Delete item</li>
+    </ul>
     
+    <h2>Testing Instructions</h2>
+    <p>Use Postman, Thunder Client, or cURL to test the API endpoints.</p>
+    
+    <script>
+        // Simple script to display current API URL
+        document.getElementById('api-url').textContent = window.location.origin;
+    </script>
 </body>
-
 </html>
